@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Safe Drive</string>
+    <string name="location_description">Textview that shows current location of user</string>
+    <string name="time_label">Time</string>
+    <string name="time_label_desc">Shows time in the current location</string>
+    <string name="traffic_volume_label">Traffic</string>
+    <string name="traffic_label_desc">Shows volume of traffic in current location</string>
+    <string name="roadblocks_label">Roadblocks</string>
+    <string name="roadblocks_label_desc">Shows the number of road blocks in current location</string>
+    <string name="robots_label">Robots</string>
+    <string name="robots_label_desc">Shows status of robots at current location</string>
+    <string name="carnage_label">Carnage</string>
+    <string name="cranage_label_desc">Indicates number of mishaps or breakdowns</string>
+    <string name="placeholder_text">not available</string>
+    <string name="drive_mode_button_text">DRIVE MODE</string>
+    <string name="drive_mode_button_desc">Button to start drive mode activity</string>
+    <string name="select_location_button">LOCATION</string>
+    <string name="location_button_desc">Button to start select location activity</string>
+    <string name="drive_mode_switch_text">Turn on Drive Mode</string>
+    <string name="switch_desc">Switch for Drive Mode</string>
+</resources>

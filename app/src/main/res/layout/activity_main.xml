@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bitland.safedrive.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="3dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/locationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/location_description"
+        android:text="--"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginEnd="18dp"
+        app:layout_constraintRight_toRightOf="@+id/progressBar"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar"
+        android:layout_marginRight="18dp"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/locationTextView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/linearLayout">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/timeLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/time_label_desc"
+                android:text="@string/time_label"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:paddingLeft="@dimen/padding_left"/>
+
+            <TextView
+                android:id="@+id/trafficVolumeLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/traffic_label_desc"
+                android:text="@string/traffic_volume_label"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:paddingLeft="@dimen/padding_left"/>
+
+            <TextView
+                android:id="@+id/roadblocksLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/roadblocks_label_desc"
+                android:text="@string/roadblocks_label"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:paddingLeft="@dimen/padding_left"/>
+
+            <TextView
+                android:id="@+id/robotsLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/robots_label_desc"
+                android:text="@string/robots_label"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:paddingLeft="@dimen/padding_left"/>
+
+            <TextView
+                android:id="@+id/carnageLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/cranage_label_desc"
+                android:text="@string/carnage_label"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:paddingLeft="@dimen/padding_left"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/timeTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/time_label_desc"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size"
+                tools:text="@string/placeholder_text"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:paddingLeft="@dimen/padding_left"/>
+
+            <TextView
+                android:id="@+id/trafficTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/traffic_label_desc"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size"
+                tools:text="@string/placeholder_text"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:paddingLeft="@dimen/padding_left"/>
+
+            <TextView
+                android:id="@+id/roadblocksTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/roadblocks_label_desc"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size"
+                tools:text="@string/placeholder_text"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:paddingLeft="@dimen/padding_left"/>
+
+            <TextView
+                android:id="@+id/robotsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/robots_label_desc"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size"
+                tools:text="@string/placeholder_text"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:paddingLeft="@dimen/padding_left"/>
+
+            <TextView
+                android:id="@+id/carnageTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/cranage_label_desc"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size"
+                tools:text="@string/placeholder_text"
+                android:layout_marginTop="@dimen/vertical_margin"
+                android:paddingLeft="@dimen/padding_left"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vertical_margin"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/driveModeButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/drive_mode_button_desc"
+                android:text="@string/drive_mode_button_text"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/locationButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/location_button_desc"
+                android:text="@string/select_location_button"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
