@@ -6,7 +6,8 @@ import android.widget.Switch;
 
 public class DriveModeActivity extends AppCompatActivity {
 
-    public Switch mDriveModeSwitch;
+    public static Switch mDriveModeSwitch;
+//    private IncomingCallMonitor mCallMonitor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

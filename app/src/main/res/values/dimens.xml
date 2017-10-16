@@ -4,5 +4,5 @@
     <dimen name="vertical_margin">32dp</dimen>
     <dimen name="horizontal_margin">32dp</dimen>
     <dimen name="padding_left">16dp</dimen>
-    <dimen name="switch_padding">170dp</dimen>
+    <dimen name="switch_padding">150dp</dimen>
 </resources>
