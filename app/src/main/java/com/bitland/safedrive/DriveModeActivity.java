@@ -14,7 +14,7 @@ public class DriveModeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drive_mode);
 
-        mDriveModeSwitch = (Switch) findViewById(R.id.driveModeSwitch);
+        mDriveModeSwitch = findViewById(R.id.driveModeSwitch);
     }
 
 //    public boolean isSwitchOn(){

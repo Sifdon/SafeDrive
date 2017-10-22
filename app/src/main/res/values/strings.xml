@@ -7,7 +7,7 @@
     <string name="traffic_label_desc">Shows volume of traffic in current location</string>
     <string name="roadblocks_label">Roadblocks</string>
     <string name="roadblocks_label_desc">Shows the number of road blocks in current location</string>
-    <string name="robots_label">Robots</string>
+    <string name="robots_label">Traffic Lights</string>
     <string name="robots_label_desc">Shows status of robots at current location</string>
     <string name="carnage_label">Carnage</string>
     <string name="cranage_label_desc">Indicates number of mishaps or breakdowns</string>

@@ -36,9 +36,10 @@ import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
-    //contants for verifying permissions
+    //constants for verifying permissions
     private static final int READ_PHONE_STATE_RESULT = 1;
     private static final int COARSE_LOCATION_RESULT = 2;
+    public static final String LOCATION_NAME = "location_name";
 
     //List of permissions
     List<String> permissions = new ArrayList<>();
@@ -53,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
 
     //Get current time.
     String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
-
 
     //Bind view with butterknife
     @BindView(R.id.progressBar) ProgressBar mProgressBar;
@@ -79,12 +79,20 @@ public class MainActivity extends AppCompatActivity {
 
         checkPermission(1);
 
-
     }
 
     //Use butterknife to generate an on click listener for mDriveModeButton
     @OnClick(R.id.driveModeButton) void startDriveModeActivity(){
         checkPermission(0);
+    }
+
+    //Use butterknife to generate an on click listener for mLocationButton
+    @OnClick(R.id.locationButton) void startRoadListActivity(){
+        Intent intent = new Intent(this, RoadListActivity.class);
+        String locationName = mLocationTextView.getText().toString();
+        intent.putExtra(LOCATION_NAME, locationName);
+        startActivity(intent);
+
     }
 
     //method to start drive mode activity
@@ -121,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
                                 }
 
                             } else {
-                                mLocationTextView.setText("location not found");
+                                mLocationTextView.setText("Location not found");
                                 mProgressBar.setVisibility(View.INVISIBLE);
                             }
 
@@ -149,6 +157,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //method to verify if permissions have been granted and take appropriate action based on results
     private void checkPermission(int position){
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
 
