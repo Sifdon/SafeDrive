@@ -50,12 +50,15 @@ public class RoadListActivity extends AppCompatActivity {
         mDatabaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                database_loop:
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()){
                     Location location1 = snapshot.getValue(Location.class);
                     String locationName = location1.getName();
                     if (location.equals(locationName)){
                         displayRoadList(location1);
-                    }else {
+                        break database_loop;
+                    }
+                    else {
                         Toast.makeText(RoadListActivity.this, "Location not found", Toast.LENGTH_LONG).show();
                     }
                 }
