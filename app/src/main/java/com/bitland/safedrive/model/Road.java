@@ -1,4 +1,4 @@
-package com.bitland.safedrive;
+package com.bitland.safedrive.model;
 
 import com.google.firebase.database.IgnoreExtraProperties;
 

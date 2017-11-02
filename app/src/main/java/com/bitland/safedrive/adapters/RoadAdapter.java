@@ -3,7 +3,7 @@
  * layout file. A custom adapter is compulsory in recycler views and has two major functions i.e mapping data to fields in layout
  * and making the data suited from the views. This is done using the helper methods defined in the Adapter and ViewHolder classes
  * below.*/
-package com.bitland.safedrive;
+package com.bitland.safedrive.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +12,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.bitland.safedrive.R;
+import com.bitland.safedrive.model.Road;
+import com.bitland.safedrive.ui.RoadInfoActivity;
 
 import java.util.ArrayList;
 

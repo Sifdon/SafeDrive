@@ -13,27 +13,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".DriveModeActivity">
+        <activity android:name=".ui.DriveModeActivity">
         </activity>
 
         <receiver
-            android:name=".IncomingCallMonitor"
+            android:name=".broadcastReceivers.IncomingCallMonitor"
             android:enabled="true">
             <intent-filter>
                 <action android:name="android.intent.action.PHONE_STATE"/>
             </intent-filter>
         </receiver>
 
-        <activity android:name=".RoadListActivity">
+        <activity android:name=".ui.RoadListActivity">
         </activity>
-        <activity android:name=".RoadInfoActivity">
+        <activity android:name=".ui.RoadInfoActivity">
         </activity>
     </application>
 

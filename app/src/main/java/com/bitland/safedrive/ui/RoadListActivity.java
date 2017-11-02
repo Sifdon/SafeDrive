@@ -2,7 +2,7 @@
  * The database object which is the entry point into the fire base real time database is also defined in this class.
  * A reference to the specif part of the data base is also defined here. In OnCreate() we then make use of the
  * addValueEventListener method and a ValueEventListener object in order to retrieve data from our fire base real time DB.*/
-package com.bitland.safedrive;
+package com.bitland.safedrive.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,10 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
+import com.bitland.safedrive.R;
+import com.bitland.safedrive.adapters.RoadAdapter;
+import com.bitland.safedrive.model.Location;
+import com.bitland.safedrive.model.Road;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -50,16 +54,14 @@ public class RoadListActivity extends AppCompatActivity {
         mDatabaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                database_loop:
                 for(DataSnapshot snapshot : dataSnapshot.getChildren()){
                     Location location1 = snapshot.getValue(Location.class);
                     String locationName = location1.getName();
                     if (location.equals(locationName)){
                         displayRoadList(location1);
-                        break database_loop;
                     }
                     else {
-                        Toast.makeText(RoadListActivity.this, "Location not found", Toast.LENGTH_LONG).show();
+                        Toast.makeText(RoadListActivity.this, "Location not found", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
@@ -71,7 +73,7 @@ public class RoadListActivity extends AppCompatActivity {
         });
     }
 
-    private void displayRoadList(com.bitland.safedrive.Location location){
+    private void displayRoadList(Location location){
         ArrayList<Road> roadList = location.getRoads();
 
 //        String name;

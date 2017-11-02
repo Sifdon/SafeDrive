@@ -1,9 +1,12 @@
-package com.bitland.safedrive;
+package com.bitland.safedrive.ui;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+
+import com.bitland.safedrive.R;
+import com.bitland.safedrive.adapters.RoadAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

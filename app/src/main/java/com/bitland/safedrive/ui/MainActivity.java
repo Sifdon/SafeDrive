@@ -2,7 +2,7 @@
  * order to avoid boiler plate code. Also contains helper methods such as the checkPermission() method which
  * verifies android build version running on a device in order to handle permissions accordingly.*/
 
-package com.bitland.safedrive;
+package com.bitland.safedrive.ui;
 
 import android.Manifest;
 import android.content.Intent;
@@ -19,14 +19,15 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.bitland.safedrive.R;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
 
 import java.io.IOException;
-import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 
@@ -52,8 +53,10 @@ public class MainActivity extends AppCompatActivity {
     //For reverse geo coding to get location description from the latitude and longitude
     private Geocoder mGeocoder;
 
-    //Get current time.
-    String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
+    //Variables for getting current time and formatting it for display
+    Calendar mCalendar;
+    SimpleDateFormat mSimpleDateFormat;
+    String currentTimeString;
 
     //Bind view with butterknife
     @BindView(R.id.progressBar) ProgressBar mProgressBar;
@@ -76,6 +79,11 @@ public class MainActivity extends AppCompatActivity {
         //Retrieve location
         mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         mGeocoder = new Geocoder(this, Locale.getDefault());
+
+        //Get current time
+        mCalendar = Calendar.getInstance();
+        mSimpleDateFormat = new SimpleDateFormat("HH:mm");
+        currentTimeString = mSimpleDateFormat.format(mCalendar.getTime());
 
         checkPermission(1);
 
@@ -119,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
                                     {
                                         cityName = mAddresses.get(0).getLocality().toString();
                                         mLocationTextView.setText(cityName);
-                                        mTimeTextView.setText(currentDateTimeString);
+                                        mTimeTextView.setText(currentTimeString);
                                         mProgressBar.setVisibility(View.INVISIBLE);
                                     }
 

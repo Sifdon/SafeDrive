@@ -1,4 +1,4 @@
-package com.bitland.safedrive;
+package com.bitland.safedrive.broadcastReceivers;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.telephony.TelephonyManager;
 import android.widget.Toast;
 
-import static com.bitland.safedrive.DriveModeActivity.mDriveModeSwitch;
+import static com.bitland.safedrive.ui.DriveModeActivity.mDriveModeSwitch;
 
 public class IncomingCallMonitor extends BroadcastReceiver {
 
