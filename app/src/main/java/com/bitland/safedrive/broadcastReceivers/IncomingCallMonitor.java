@@ -20,6 +20,9 @@ public class IncomingCallMonitor extends BroadcastReceiver {
 
                 if (state.equals(TelephonyManager.EXTRA_STATE_RINGING)) {
                     Toast.makeText(context, "Phone is Ringing", Toast.LENGTH_LONG).show();
+//                    Intent intent1 = new Intent(Intent.ACTION_MAIN);
+//                    intent1.addCategory(Intent.CATEGORY_APP_MESSAGING);
+//                    context.startActivity(intent1);
                 }
 
                 if (state.equals(TelephonyManager.EXTRA_STATE_OFFHOOK)) {

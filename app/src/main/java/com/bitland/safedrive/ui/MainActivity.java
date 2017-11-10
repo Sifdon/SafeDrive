@@ -18,6 +18,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bitland.safedrive.R;
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -137,8 +138,10 @@ public class MainActivity extends AppCompatActivity {
                                 }
 
                             } else {
-                                mLocationTextView.setText("Location not found");
+                                mLocationTextView.setText("Location not found.");
                                 mProgressBar.setVisibility(View.INVISIBLE);
+                                Toast.makeText(MainActivity.this, "Make sure Wifi or data network is on and that location information is on.",
+                                        Toast.LENGTH_LONG).show();
                             }
 
                         }
