@@ -1,3 +1,5 @@
+/**This class models a road. A road comprises the following components: name and status of the road which is indicated by
+traffic volume, road block count, traffic lights status and carnage count.*/
 package com.bitland.safedrive.model;
 
 import com.google.firebase.database.IgnoreExtraProperties;

@@ -1,3 +1,5 @@
+/**This is the activity that comes up when a road which is the the recycler view is clicked. It shows the name of the road and
+ the status of that road i.e traffic volume, road block count, carnage count and state of traffic lights.*/
 package com.bitland.safedrive.ui;
 
 import android.content.Intent;

@@ -1,3 +1,5 @@
+/**This class models a location. A location in this context is defined as a city or town. The location has a name and a
+ list of roads within that location.*/
 package com.bitland.safedrive.model;
 
 import android.os.Parcel;

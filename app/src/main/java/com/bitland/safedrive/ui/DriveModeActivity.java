@@ -1,3 +1,5 @@
+/**This is the activity which comes up when the Drive Mode Switch in MainActivity is clicked. The class makes use of the switch
+ widget to allow the user to toggle drive mode on or off in order to listen for incoming calls.*/
 package com.bitland.safedrive.ui;
 
 import android.content.Context;
